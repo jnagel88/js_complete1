@@ -133,31 +133,72 @@
 
 
 
-var p1h;
-var p1a;
-var p2h;
-var p2a;
+// var p1h;
+// var p1a;
+// var p2h;
+// var p2a;
 
-p1h = prompt("Player one height (in Centimeters):");
-p1a = prompt("player one age:");
-var p1ai = parseInt(p1a);
-var p1hi = parseInt(p1h);
+// p1h = prompt("Player one height (in Centimeters):");
+// p1a = prompt("player one age:");
+// var p1ai = parseInt(p1a);
+// var p1hi = parseInt(p1h);
 
-p2h = prompt("Player two height (in Centimeters:");
-p2a = prompt("player two age:");
-var p2ai = parseInt(p2a);
-var p2hi = parseInt(p2h);
+// p2h = prompt("Player two height (in Centimeters:");
+// p2a = prompt("player two age:");
+// var p2ai = parseInt(p2a);
+// var p2hi = parseInt(p2h);
 
-var p1score = p1ai * 5 + p1hi;
-var p2score = p2ai * 5 + p2hi;
+// var p1score = p1ai * 5 + p1hi;
+// var p2score = p2ai * 5 + p2hi;
 
-if (p1score === p2score){
-	console.log("TIE!!!")
-} else if(p2score>p1score){
-	console.log("Player Two wins with " + p2score+ "!")
-} else {
-	console.log("Player One wins with " + p1score + "!")
+// if (p1score === p2score){
+// 	console.log("TIE!!!")
+// } else if(p2score>p1score){
+// 	console.log("Player Two wins with " + p2score+ "!")
+// } else {
+// 	console.log("Player One wins with " + p1score + "!")
+// }
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////
+// Lecture 16: Functions
+
+function calcAge(yearOfbirth) {
+	// body...
+	var age = 2018 - yearOfbirth;
+	return age;
 }
+
+var joeAge = calcAge(1988);
+var elisaAge = calcAge(1975);
+// console.log(elisaAge);
+
+function yearsToRetire(name, yearOfbirth) {
+	var age = calcAge(yearOfbirth);
+	var retirement = 65 - age;
+	if (retirement >= 1){
+		console.log(name + ' can retire in ' + retirement + ' years.');
+	} else if (retirement<= 0){
+		console.log(name + ' can retire now.')
+	}
+
+}
+
+yearsToRetire("joe", 1988); 
+yearsToRetire("elisa", 1975);
+yearsToRetire("john", 1955);
+
+
+
 
 
 
