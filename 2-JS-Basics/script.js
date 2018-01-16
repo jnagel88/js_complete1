@@ -95,36 +95,69 @@
 ///////////////////////////////////////////////
 // Lecture 13: boolean logic and switch
 
-var age = 35
+// var age = 35
 
-if (age <= 19) {
-	console.log('john is a teenager')
-} else if(age >= 20 && age < 30){
-	console.log("john is a young man.")
+// if (age <= 19) {
+// 	console.log('john is a teenager')
+// } else if(age >= 20 && age < 30){
+// 	console.log("john is a young man.")
+// }
+//  else {
+// 	console.log("john is a man")
+// }
+
+
+// var job = 'teacher'
+
+// job = prompt('What does john do?');
+
+// switch(job){
+// 	case 'teacher':
+// 		console.log( 'John teaches kids');
+// 		break;
+// 	case 'driver':
+// 		console.log("John drives a cab.");
+// 		break;
+// 	case 'cop':
+// 		console.log('john helps fight crime.');
+// 		break;
+// 	default:
+// 		console.log('John does something else.');
+// }
+
+
+
+
+///////////////////////////////////////////////
+// coding challenge 1 
+
+
+
+var p1h;
+var p1a;
+var p2h;
+var p2a;
+
+p1h = prompt("Player one height (in Centimeters):");
+p1a = prompt("player one age:");
+var p1ai = parseInt(p1a);
+var p1hi = parseInt(p1h);
+
+p2h = prompt("Player two height (in Centimeters:");
+p2a = prompt("player two age:");
+var p2ai = parseInt(p2a);
+var p2hi = parseInt(p2h);
+
+var p1score = p1ai * 5 + p1hi;
+var p2score = p2ai * 5 + p2hi;
+
+if (p1score === p2score){
+	console.log("TIE!!!")
+} else if(p2score>p1score){
+	console.log("Player Two wins with " + p2score+ "!")
+} else {
+	console.log("Player One wins with " + p1score + "!")
 }
- else {
-	console.log("john is a man")
-}
-
-
-var job = 'teacher'
-
-job = prompt('What does john do?');
-
-switch(job){
-	case 'teacher':
-		console.log( 'John teaches kids');
-		break;
-	case 'driver':
-		console.log("John drives a cab.");
-		break;
-	case 'cop':
-		console.log('john helps fight crime.');
-		break;
-	default:
-		console.log('John does something else.');
-}
-
 
 
 
