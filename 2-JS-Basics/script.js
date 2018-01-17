@@ -320,19 +320,83 @@ if(john.indexOf('teacher') === -1);
 // console.log(john)
 
 
-var john = {
-	name: 'john', 
-	lastName: 'Smith',
-	birthYear: 1990,
-	job: 'teacher',
-	isMarried:false,
-	family: ['Jane', 'Mark', 'Bob'],
-	calcAge: function(){
-		// return 2018 - this.birthYear;
-		this.age = 2018 - this.birthYear;
-	}
-};
+// var john = {
+// 	name: 'john', 
+// 	lastName: 'Smith',
+// 	birthYear: 1990,
+// 	job: 'teacher',
+// 	isMarried:false,
+// 	family: ['Jane', 'Mark', 'Bob'],
+// 	calcAge: function(){
+// 		// return 2018 - this.birthYear;
+// 		this.age = 2018 - this.birthYear;
+// 	}
+// };
 
 
-john.calcAge();
-console.log(john);
+// john.calcAge();
+// console.log(john);
+
+
+
+//////////////////////////////////////////////////
+//Lecture 21: loops and iteration
+
+// for (var i = 0; i < 10; i++){
+// 	console.log(i);
+// }
+
+// var names = ['john', 'jane', 'mary', 'mark', 'bob']
+
+// for (var i = 0; i<names.length; i++){
+// 	console.log(names[i]);
+// }
+
+// //for loops
+// for (var i = names.length -1; i >= 0 ;i--) {
+// 	console.log(names[i]);
+// }
+
+//While loops
+// var i = 0;
+// while(i < names.length){
+// 	console.log(names[i]);
+// 	i++;
+// }
+
+// for (var i = 0; i <=5; i++) {
+// 	console.log(i);
+
+// 	if (i === 3){
+// 		break;
+// 	}
+// }
+
+
+// for (var i = 0; i <=5; i++) {
+// 	if (i === 3){
+// 		continue;
+// 	}
+
+// 	console.log(i);
+// }
+
+/////////////////////////////////////////////////
+//Lecture 21: Coding Challenge 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
