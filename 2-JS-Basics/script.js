@@ -263,38 +263,76 @@ if(john.indexOf('teacher') === -1);
 
 // var arr = [1,2,3]
 
-var john = {
-	name: 'john', 
-	lastName: 'Smith',
-	birthYear: 1990,
-	job: 'teacher',
-	isMarried:false
-};
+// var john = {
+// 	name: 'john', 
+// 	lastName: 'Smith',
+// 	birthYear: 1990,
+// 	job: 'teacher',
+// 	isMarried:false
+// };
 
-console.log(john.lastName);
-console.log(john['lastName']);
-
-
-var xyz = "job";
-console.log(john[xyz]);
+// console.log(john.lastName);
+// console.log(john['lastName']);
 
 
-john.lastName = 'Miller';
-john['job'] = 'programmer';
-
-console.log(john)
+// var xyz = "job";
+// console.log(john[xyz]);
 
 
-var jane = new Object();
-jane.name = 'Jane';
-jane.lastName = 'Smith';
-jane.birthYear = 1969
-jane.job = 'retired'
-jane.isMarried = true;
+// john.lastName = 'Miller';
+// john['job'] = 'programmer';
+
+// console.log(john)
+
+
+// var jane = new Object();
+// jane.name = 'Jane';
+// jane.lastName = 'Smith';
+// jane.birthYear = 1969
+// jane.job = 'retired'
+// jane.isMarried = true;
 
 
 ///////////////////////////////////////////
 // Lecture 20
 
 
+// var john = {
+// 	name: 'john', 
+// 	lastName: 'Smith',
+// 	birthYear: 1990,
+// 	job: 'teacher',
+// 	isMarried:false,
+// 	family: ['Jane', 'Mark', 'Bob'],
+// 	calcAge: function(){
+// 		return 2018 - this.birthYear;
+// 	}
+// };
 
+// console.log(john.calcAge(1990));
+
+// console.log(john.calcAge());
+
+// var age = john.calcAge();
+
+// john.age = age;
+
+// console.log(john)
+
+
+var john = {
+	name: 'john', 
+	lastName: 'Smith',
+	birthYear: 1990,
+	job: 'teacher',
+	isMarried:false,
+	family: ['Jane', 'Mark', 'Bob'],
+	calcAge: function(){
+		// return 2018 - this.birthYear;
+		this.age = 2018 - this.birthYear;
+	}
+};
+
+
+john.calcAge();
+console.log(john);
