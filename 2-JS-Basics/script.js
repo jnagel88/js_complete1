@@ -172,31 +172,93 @@
 ///////////////////////////////////////////////////
 // Lecture 16: Functions
 
-function calcAge(yearOfbirth) {
-	// body...
-	var age = 2018 - yearOfbirth;
-	return age;
-}
+// function calcAge(yearOfbirth) {
+// 	// body...
+// 	var age = 2018 - yearOfbirth;
+// 	return age;
+// }
 
-var joeAge = calcAge(1988);
-var elisaAge = calcAge(1975);
-// console.log(elisaAge);
+// var joeAge = calcAge(1988);
+// var elisaAge = calcAge(1975);
+// // console.log(elisaAge);
 
-function yearsToRetire(name, yearOfbirth) {
-	var age = calcAge(yearOfbirth);
-	var retirement = 65 - age;
-	if (retirement >= 1){
-		console.log(name + ' can retire in ' + retirement + ' years.');
-	} else if (retirement<= 0){
-		console.log(name + ' can retire now.')
-	}
+// function yearsToRetire(name, yearOfbirth) {
+// 	var age = calcAge(yearOfbirth);
+// 	var retirement = 65 - age;
+// 	if (retirement >= 1){
+// 		console.log(name + ' can retire in ' + retirement + ' years.');
+// 	} else if (retirement<= 0){
+// 		console.log(name + ' can retire now.')
+// 	}
 
-}
+// }
 
-yearsToRetire("joe", 1988); 
-yearsToRetire("elisa", 1975);
-yearsToRetire("john", 1955);
+// yearsToRetire("joe", 1988); 
+// yearsToRetire("elisa", 1975);
+// yearsToRetire("john", 1955);
 
+
+
+/////////////////////////////////////////////////
+// Lecture 17: Statements and Expressions
+
+
+// function someFun(par){
+// 	//code
+// }
+
+
+
+// var someFun = Function(par) {
+// 	//code
+// }
+
+// // expressions
+
+// 3 + 4;
+// var x = 3;
+
+// //statements
+// action but not immediate value
+
+// if (x===5){
+// 	//do something
+// }
+
+
+/////////////////////////////////////////
+//lecture 18: arrays
+
+
+// var names = ['joe', 'elisa', 'jason'];
+// var years = new Array(1988, 1975, 1989);
+// console.log(names[1]);
+
+// names[1] = "Ben";
+// console.log(names[1]);
+
+var john = ['john', 'smith', 1990, 'teacher', false];
+
+john.push('blue');
+// console.log(john);
+john.unshift('mr.')
+// console.log(john);
+
+john.pop();
+// console.log(john);
+
+john.shift();
+// console.log(john);
+
+// alert(john.indexOf('smith'));
+
+if(john.indexOf('teacher') === -1);
+	console.log('John is not a teacher');
+
+
+
+///////////////////////////////////////////////////
+//lecture 19
 
 
 
