@@ -384,12 +384,50 @@ if(john.indexOf('teacher') === -1);
 /////////////////////////////////////////////////
 //Lecture 21: Coding Challenge 2
 
+var years = [1988, 1975, 1955, 2001];
+var result = [];
+var age = [];
+
+// for (var i = 0; i < years.length; i++) {
+// 	age[i] = 2018 - years[i];
+// }
+
+// console.log(age);
+
+// for (var i = 0; i < age.length; i++){
+// 	if (age[i]<18) {
+// 		console.log("person " + (i + 1) + " is " + age[i] + " years old, and is not of age.")
+// 		result[i] = false;
+// 	} else {
+// 		console.log("person " + (i + 1) + " is " + age[i] + " years old, and is of age.")
+// 		result[i] = true;
+// 	}
+// }
+
+// console.log(result)
+
+// function resultsArray(years){
+// 	for (var i = 0; i < years.length; i++) {
+// 	age[i] = 2018 - years[i];
+// }
+
+// 	console.log(age);
+
+// 	for (var i = 0; i < age.length; i++){
+// 		if (age[i]<18) {
+// 			result[i] = false;
+// 		} else {
+// 			result[i] = true;
+// 		}
+// 	}
+// }
+
+// var full_1 = resultsArray(years);
 
 
 
-
-
-
+///////////////////////////////////////////////////
+// Lecture 24: ES5, ES6 / ES2015 & ES2016
 
 
 
