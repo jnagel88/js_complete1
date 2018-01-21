@@ -85,11 +85,40 @@
 ///////////////////////////////////////
 // Lecture 32: The this keyword
 
+// console.log(this);
+
+// calcAge(1988)
+
+// function calcAge(year) {
+//     console.log(2018-year);
+//     console.log(this)
+// }
 
 
 
+var john = {
+    name:"john",
+    yearOfBirth: 1988,
+    calcAge: function() {
+        console.log(this);
+        console.log(2018-this.yearOfBirth)
+
+        // function innerFunc() {
+        //     console.log(this);
+        // }
+
+        // innerFunc();
+    }
+}
+
+john.calcAge();
 
 
+var mike = {
+    name: "mike",
+    yearOfBirth: 1984
+};
 
 
-
+mike.calcAge = john.calcAge;
+mike.calcAge();
