@@ -122,3 +122,4 @@ var mike = {
 
 mike.calcAge = john.calcAge;
 mike.calcAge();
+
