@@ -28,34 +28,22 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 	document.getElementById('dice-1').src = 'dice-' + dice1 + '.png';
 	document.getElementById('dice-2').src = 'dice-' + dice2 + '.png';
 
- if (dice1 !== 1 && dice2 !== 1) {
+
+		//player loses dice score if they roll two 6's
+		if (dice1 === 6 && dice2 === 6) {
+			//player loses score
+			scores[activeplayer] = 0;
+			document.querySelector('#score-' + activeplayer).textContent = '0';
+			nextPlayer();
+		} else if (dice1 !== 1 && dice2 !== 1) {
 			// add score
 			roundscore += dice1 + dice2;
 			document.querySelector('#current-'+ activeplayer).textContent = roundscore;
 			} else {
 			// next player, round score 0
 			nextPlayer();
-			};
-
-
-		// //player loses dice score if they roll two 6's
-		// if (dice === 6 && lastdice === 6) {
-		// 	//player loses score
-		// 	scores[activeplayer] = 0;
-		// 	document.querySelector('#score-' + activeplayer).textContent = '0';
-		// 	nextPlayer();
-		// } else if (dice !== 1) {
-		// 	// add score
-		// 	roundscore += dice;
-		// 	document.querySelector('#current-'+ activeplayer).textContent = roundscore;
-		// 	} else {
-		// 	// next player, round score 0
-		// 	nextPlayer();
-		// 	}
-
-		// lastdice = dice;
+			}
 	}
-
 });
 
 //add score on hold click
@@ -66,7 +54,6 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
 
 		//update the UI
 		document.querySelector('#score-' + activeplayer).textContent = scores[activeplayer];
-
 
 		var input = document.querySelector('.final-score').value;
 
@@ -90,12 +77,8 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
 		//switch player
 		nextPlayer();
 		}
-
 	}
-	
-
 });
-
 
 function nextPlayer(){
 	// next player, round score 0
@@ -138,26 +121,3 @@ function init() {
 	document.querySelector('.btn-hold').style.display = 'block';
 
 }
-
-
-
-
-
-
-///////////////////////////////////////////////////////////////////////
-//updating rules challenge
-///////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-// document.querySelector('#current-'+ activePlayer).textContent = dice;
-// alt method to utilize HTML elements in the output.
-// document.querySelector('#current-'+ activePlayer).innerHTML = '<em>' + dice + '</em>';
-// var x= document.querySelector('#score-0').textContent;
