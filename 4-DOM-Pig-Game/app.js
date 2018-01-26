@@ -13,6 +13,7 @@ var scores, roundscore, activeplayer, gameplaying;
 
 init();
 
+var lastdice;
 
 // Dice roller
 document.querySelector('.btn-roll').addEventListener('click', function() {
@@ -25,19 +26,23 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 	diceDOM.style.display = 'block';
 	diceDOM.src = 'dice-' + dice + '.png';
 
-	//3. update the round score IF the roll is not a 1
-	if (dice !== 1){
-		// add score
-		roundscore += dice;
-		document.querySelector('#current-'+ activeplayer).textContent = roundscore;
-	} else{
-		// next player, round score 0
-		nextPlayer();
-	}
-	}
-	
+		//player loses dice score if they roll two 6's
+		if (dice === 6 && lastdice === 6) {
+			//player loses score
+			scores[activeplayer] = 0;
+			document.querySelector('#score-' + activeplayer).textContent = '0';
+			nextPlayer();
+		} else if (dice !== 1) {
+			// add score
+			roundscore += dice;
+			document.querySelector('#current-'+ activeplayer).textContent = roundscore;
+			} else {
+			// next player, round score 0
+			nextPlayer();
+			}
 
-
+		lastdice = dice;
+	}
 
 });
 
@@ -110,6 +115,23 @@ function init() {
 	document.querySelector('.btn-hold').style.display = 'block';
 
 }
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+//updating rules challenge
+///////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
 
 
 // document.querySelector('#current-'+ activePlayer).textContent = dice;
