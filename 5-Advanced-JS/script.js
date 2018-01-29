@@ -61,40 +61,83 @@
 ///////////////////////////////////////////
 //Lecture 55: Primitives vs Objects
 
-//primitives
-var a = 23;
-var b = a;
-a = 46
+// //primitives
+// var a = 23;
+// var b = a;
+// a = 46
 
-console.log(a);
-console.log(b);
-
-
-//Objects
-var obj1 = { 
-	name:'john',
-	age: 26
-};
-
-var obj2 = obj1;
-obj1.age = 30;
-
-console.log(obj1.age)
-console.log(obj2.age)
+// console.log(a);
+// console.log(b);
 
 
-//functions
-var age = 27;
-var obj = {
-	name:'Jonas',
-	city: 'lisbon'
-};
+// //Objects
+// var obj1 = { 
+// 	name:'john',
+// 	age: 26
+// };
 
-function change(a, b) {
-	a = 30;
-	b.city = "San francisco";
+// var obj2 = obj1;
+// obj1.age = 30;
+
+// console.log(obj1.age)
+// console.log(obj2.age)
+
+
+// //functions
+// var age = 27;
+// var obj = {
+// 	name:'Jonas',
+// 	city: 'lisbon'
+// };
+
+// function change(a, b) {
+// 	a = 30;
+// 	b.city = "San francisco";
+// }
+
+// change(age, obj);
+// console.log(age);
+// console.log(obj.city);
+
+//////////////////////////////////////////
+//Lecture 56:Functions as Arguments
+
+var years = [1990, 1965, 1937, 2005, 1998];
+
+function arrayCalc(arr, fn) {
+	var arrRes = [];
+	for (var i = 0; i< arr.length; i++) {
+		arrRes.push(fn(arr[i]));
+	}
+	return arrRes;
 }
 
-change(age, obj);
-console.log(age);
-console.log(obj.city);
+function calcAge(el) {
+	return 2018 - el;
+}
+
+function isFullAge(el) {
+	return el >= 18;
+}
+
+function maxHeartRate(el) {
+
+	if(el >= 18 && el <= 81){
+	return Math.round(206.9 - (0.67 * el));
+} else{
+	return -1;
+	}
+}
+
+
+var ages = arrayCalc(years, calcAge);
+
+var fullAges = arrayCalc(ages, isFullAge);
+
+var rates = arrayCalc(ages, maxHeartRate);
+
+
+console.log(years);
+console.log(ages);
+console.log(fullAges);
+console.log(rates)
